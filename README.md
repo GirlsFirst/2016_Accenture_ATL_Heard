@@ -2,9 +2,7 @@
 connecting LGBTQ+ youth and/or youths with mental illness to anonymous penpals
 
 
-
-connecting LGBTQ+ youth and/or youths with mental illness to anonymous penpals
-
+Debbie
 elissa
 
 License:
