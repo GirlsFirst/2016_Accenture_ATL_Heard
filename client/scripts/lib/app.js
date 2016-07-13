@@ -9,7 +9,7 @@ import Loader from 'angular-ecmascript/module-loader';
 import { Meteor } from 'meteor/meteor';
 
 // Modules
-import ChatsCtrl from 'C:\Users\gwclead1\Desktop\Heard\client\scripts\controllers\chats.controller';
+import ChatsCtrl from 'C:\Users\gwclead1\Desktop\Heard\2016_Accenture_ATL_heard\client\scripts\controllers\chats.controller';
 import RoutesConfig from '../routes';
 
 const App = 'Heard';
