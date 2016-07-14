@@ -1,5 +1,5 @@
 body {
-	background-color: #99B286;
+	background-color: #A0A0A0;
 	font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -23,15 +23,25 @@ form {
 	cursor: pointer;
 }
 input[type=text] {
-	border-radius: 6px;
+	border-radius: 5px;
 	border: none;
 	margin: 8px;
 }
 input[type=password] {
-	border-radius: 6px;
+	border-radius: 5px;
 	border: none;
 	margin: 8px;
 }
 form{
 	font-family: Arial, Helvetica, sans-serif;
+}
+select {
+	border-radius: 5px;
+}
+#square {
+	border: 10px solid #4DFF4D;
+	height: 250px;
+	width: 250px;
+	vertical-align: middle;
+	border-radius: 2px;
 }
