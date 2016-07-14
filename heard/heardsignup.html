@@ -3,16 +3,73 @@
 	<title>
 	</title>
 	<link rel="stylesheet" type="text/css" href="heardlogin.css">
+	<script>
+		var x = document.getElementById("demo");
+		function getLocation() {
+			if (navigator.geolocation) {
+				navigator.geolocation.getCurrentPosition(showPosition);
+			} else {
+				x.innerHTML = "Geolocation is not supported by this browser.";
+			}
+		}
+		function showPosition(position) {
+			x.innerHTML = "Latitude: " + position.coords.latitude + 
+			"<br>Longitude: " + position.coords.longitude; 
+		}
+		function showError(error) {
+			switch(error.code) {
+				case error.PERMISSION_DENIED:
+					x.innerHTML = "User denied the request for Geolocation."
+					break;
+				case error.POSITION_UNAVAILABLE:
+					x.innerHTML = "Location information is unavailable."
+					break;
+				case error.TIMEOUT:
+					x.innerHTML = "The request to get user location timed out."
+					break;
+				case error.UNKNOWN_ERROR:
+					x.innerHTML = "An unknown error occurred."
+					break;
+			}
+		}
+		/*
+		Random link button- By JavaScript Kit (http://javascriptkit.com)
+		Over 300+ free scripts!
+		This credit MUST stay intact for use
+		*/
+
+		//specify random links below. You can have as many as you want
+		var randomlinks=new Array()
+
+		randomlinks[0]="https://en.wikipedia.org/wiki/Mount_Miwa"
+		randomlinks[1]="https://en.wikipedia.org/wiki/George_Washington"
+		randomlinks[2]="https://en.wikipedia.org/wiki/Canada"
+		randomlinks[3]="https://en.wikipedia.org/wiki/Sherlock_Holmes"
+		randomlinks[4]="https://en.wikipedia.org/wiki/Pivot_joint"
+		randomlinks[5]="https://en.wikipedia.org/wiki/Beyonc%C3%A9"
+		randomlinks[6]="https://en.wikipedia.org/wiki/Rentschler_Farm_Museum"
+		randomlinks[7]="https://en.wikipedia.org/wiki/The_Beatles"
+		randomlinks[8]="http://www.google.com/doodles/the-100th-tour-de-france"
+		randomlinks[9]="https://en.wikipedia.org/wiki/Mario_Kart_8"
+		randomlinks[10]="https://en.wikipedia.org/wiki/Meme"
+
+		function randomlink(){
+		window.location=randomlinks[Math.floor(Math.random()*randomlinks.length)]
+		}
+	</script>
+
 </head>
-<body>
+<body onload="getLocation()">
+	<div id="panic" onclick="randomlink()">Panic</div>
 	<div id="banner"><center><img src="logo.png" id="logo"></center></div>
 	<br><br>
 	<h1 align="center">Sign Up</h1>
-	<br><br>
+	<br>
+	<p class="required">* marks a required field</p>
 	<center>
 	Date of Birth:<br><br>
 	<form>
-	<select name="month">
+	<font color="red">*</font><select name="month">
 		<option value="1">January</option>
 		<option value="2">February</option>
 		<option value="3">March</option>
@@ -60,7 +117,7 @@
 		<option value="31">31</option>
 	</select>
 	<input type="text" name="year" placeholder="YYYY"><br><br>
-	<select name="gender" placeholder="Gender">
+	<font color="red">*</font><select name="gender" placeholder="Gender">
 		<option value="" disabled selected>Gender</option>
 		<option value="agender">Agender</option>
 		<option value="bigender">Bigender</option>
@@ -148,6 +205,8 @@
 			<option value="schizoaffective">Schizoaffective Disorder</option>
 			<option value="somatic">Somatic Symptom Disorder</option>
 			<option value="trich">Trichotillomania</option>
+			<option value="pnts">Prefer Not to Say</option>
+			<option value="none">None</option>
 		</select>
 		<select name="mentaldisorder2">
 			<option value="" disabled selected>Second Mental Disorder (optional)</option>
@@ -264,7 +323,9 @@
 		Choose a password:
 		<input type="password" name="password"> <br>
 		Confirm password:
-		<input type="password" name="password">
+		<input type="password" name="password"><br><br>
+		<input type="radio" name="tac" value="tac"> I accept the <a href="#" id="tac">Terms and Conditions</a><br><br>
+		<input type="submit" value="Done!" class="loginscreen">
 	</form>
 	
 	</center>

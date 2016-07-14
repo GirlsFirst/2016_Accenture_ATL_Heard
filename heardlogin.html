@@ -33,35 +33,10 @@
 			}
 		}
 
-/*
-Random link button- By JavaScript Kit (http://javascriptkit.com)
-Over 300+ free scripts!
-This credit MUST stay intact for use
-*/
-
-//specify random links below. You can have as many as you want
-var randomlinks=new Array()
-
-randomlinks[0]="https://en.wikipedia.org/wiki/Mount_Miwa"
-randomlinks[1]="https://en.wikipedia.org/wiki/George_Washington"
-randomlinks[2]="https://en.wikipedia.org/wiki/Canada"
-randomlinks[3]="https://en.wikipedia.org/wiki/Sherlock_Holmes"
-randomlinks[4]="https://en.wikipedia.org/wiki/Pivot_joint"
-randomlinks[5]="https://en.wikipedia.org/wiki/Beyonc%C3%A9"
-randomlinks[6]="https://en.wikipedia.org/wiki/Rentschler_Farm_Museum"
-randomlinks[7]="https://en.wikipedia.org/wiki/The_Beatles"
-randomlinks[8]="http://www.google.com/doodles/the-100th-tour-de-france"
-randomlinks[9]="https://en.wikipedia.org/wiki/Mario_Kart_8"
-randomlinks[10]="https://en.wikipedia.org/wiki/Meme"
-
-function randomlink(){
-window.location=randomlinks[Math.floor(Math.random()*randomlinks.length)]
-}
-
-</script>
+	</script>
 </head>
 <body onload="getLocation()">
-	<div id="panic" onclick="randomlink()">Panic</div>
+	<div id="panic">Panic</div>
 	<div id="banner"><center><img src="logo.png" id="logo"></center></div>
 	<br><br><br>
 	<center><form><div id="square"><br><br><br><br>
@@ -71,7 +46,7 @@ window.location=randomlinks[Math.floor(Math.random()*randomlinks.length)]
 		<input type="password" name="password"><br><br></div><br><br>
 		<input type="submit" value="Login!" class="loginscreen">
 	</form>
-	<a href="heardsignup.html" target="_blank"><button class="loginscreen"> Sign Up! </button></a>
+	<button class="loginscreen"> Sign Up! </button>
 	</center>
 </body>
 </html>
