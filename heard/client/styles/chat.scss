@@ -1,9 +1,7 @@
-.item-chat {
-	.last-message-timestamp{
-		position: absolute;
-		top:16px;
-		right: 38px;
-		font-size: 14px;
-		color: #b3b3b3;
-	}
+.header-picture {
+	max-width: 33px;
+	max-height: 33px;
+	width: 100%;
+	height: 100%;
+	border-radius: 50%;
 }
