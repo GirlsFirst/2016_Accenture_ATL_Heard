@@ -1,4 +1,3 @@
-<html>
 <head>
 	<title>
 	</title>
@@ -67,6 +66,7 @@
 	<br>
 	<p class="required">* marks a required field</p>
 	<center>
+	<template name = "newUser">
 	Date of Birth:<br><br>
 	<form>
 	<font color="red">*</font><select required name="month">
@@ -136,7 +136,7 @@
 		<option value="other">Other</option>
 		<option value="none">Prefer Not to Say</option>
 	</select>
-	<input type="text" name="other" placeholder="Other"><br>
+	<input type="text" name="otherGender" placeholder="Other"><br>
 	<font color="red">*</font><select name="sexuality" required>
 		<option value="" disabled selected>Sexual Orientation</option>
 		<option value="heterosexual">Heterosexual</option>
@@ -151,7 +151,7 @@
 		<option value="other">Other</option>
 		<option value="none">Prefer Not to Say</option>
 	</select>
-	<input type="text" name="other" placeholder="Other"><br>
+	<input type="text" name="otherOrientation" placeholder="Other"><br>
 	<font color="red">*</font><select name="mentaldisorder1" required>
 			<option value="" disabled selected>Mental Disorder</option>
 			<option value="alcoholsubstanceabuse">Alcohol/Substance Abuse</option>
@@ -208,7 +208,7 @@
 			<option value="pnts">Prefer Not to Say</option>
 			<option value="none">None</option>
 		</select>
-		<select name="mentaldisorder2">
+	<select name="mentaldisorder2">
 			<option value="" disabled selected>Second Mental Disorder (optional)</option>
 			<option value="alcoholsubstanceabuse">Alcohol/Substance Abuse</option>
 			<option value="anxiety">Anxiety Disorder</option>
@@ -262,7 +262,7 @@
 			<option value="somatic">Somatic Symptom Disorder</option>
 			<option value="trich">Trichotillomania</option>
 		</select>
-		<select name="mentaldisorder3">
+	<select name="mentaldisorder3">
 			<option value="" disabled selected>Third Mental Disorder (optional)</option>
 			<option value="alcoholsubstanceabuse">Alcohol/Substance Abuse</option>
 			<option value="anxiety">Anxiety Disorder</option>
@@ -316,18 +316,19 @@
 			<option value="somatic">Somatic Symptom Disorder</option>
 			<option value="trich">Trichotillomania</option>
 		</select><br><br>
-		<font color="red">*</font><select name="interests" required>
+	<font color="red">*</font>
+		<select name="interests" required>
 			<option value="" disabled selected>Interests</option>
 		</select>
-		<br><br>
-		<font color="red">*</font>Choose a password:
+	<br><br>
+	<font color="red">*</font>Choose a password:
 		<input type="password" name="password" required> <br>
-		<font color="red">*</font>Confirm password:
-		<input type="password" name="password" required><br><br>
-		<font color="red">*</font><input type="radio" name="tac" value="tac" required> I accept the <a href="#" id="tac">Terms and Conditions</a><br><br>
+	<font color="red">*</font>Confirm password:
+		<input type="password" name="rePassword" required><br><br>
+	<font color="red">*</font><input type="radio" name="tac" value="tac" required> I accept the <a href="#" id="tac">Terms and Conditions</a><br><br>
 		<input type="submit" value="Done!" class="loginscreen">
 	</form>
+	</template>
 	
 	</center>
 </body>
-</html>
