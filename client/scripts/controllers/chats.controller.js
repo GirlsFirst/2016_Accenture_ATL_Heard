@@ -8,4 +8,7 @@ Insert INTO create_account(Username, Password, Age, Gender, Sexual Orientation, 
 	Username = 
 
 export default class ChatsCtrl extends Controller {
+	remove(chat) {
+		this.data.splice(this.data.indexOf(chat), 1);
+	}
 }

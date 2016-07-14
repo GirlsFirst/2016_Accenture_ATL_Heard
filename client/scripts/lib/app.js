@@ -10,7 +10,8 @@ import { Meteor } from 'meteor/meteor';
 
 // Modules
 import ChatsCtrl from 'C:\Users\gwclead1\Desktop\Heard\2016_Accenture_ATL_heard\client\scripts\controllers\chats.controller';
-import RoutesConfig from '../routes';
+import CalendarFilter from 'C:\Users\gwclead1\Desktop\Heard\2016_Accenture_ATL_heard\client\scripts\filters\calendar.filter'
+import RoutesConfig from 'C:\Users\gwclead1\Desktop\Heard\2016_Accenture_ATL_heard\client\scripts\routes';
 
 const App = 'Heard';
 
@@ -22,6 +23,7 @@ Angular.module(App, [
 
 new Loader(App)
 	.load(ChatsCtrl)
+	.load(CalendarFilter)
 	.load(RoutesConfig);
 
 // Startup
