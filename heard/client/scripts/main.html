@@ -1,9 +1,8 @@
-<html>
 <head>
 	<title>
 	</title>
 	<link rel="stylesheet" type="text/css" href="heardlogin.css">
-	<script>
+	<!--<script>
 		var x = document.getElementById("demo");
 		function getLocation() {
 			if (navigator.geolocation) {
@@ -57,9 +56,11 @@
 		window.location=randomlinks[Math.floor(Math.random()*randomlinks.length)]
 		}
 	</script>
+	-->
 
 </head>
-<body onload="getLocation()">
+<body>
+<div id="demo"></div>
 	<div id="panic" onclick="randomlink()">Panic</div>
 	<div id="banner"><center><img src="logo.png" id="logo"></center></div>
 	<br><br>
@@ -69,7 +70,7 @@
 	<center>
 	Date of Birth:<br><br>
 	<form id="form">
-	<font color="red">*</font><select Id= "Month"required name="month">
+	<font color="red">*</font><select Id= "Month" required name="month">
 		<option value="1">January</option>
 		<option value="2">February</option>
 		<option value="3">March</option>
@@ -318,6 +319,7 @@
 		</select><br><br>
 		<font color="red">*</font><select id="interests" name="interests" required>
 			<option value="" disabled selected>Interests</option>
+			<option value="memes">Memes</option>
 		</select>
 		<br><br>
 		<font color="red">*</font>Choose a password:
@@ -327,7 +329,7 @@
 		<font color="red">*</font><input type="radio" name="tac" value="tac" required> I accept the <a href="#" id="tac">Terms and Conditions</a><br><br>
 		<input id="submit" type="submit" value="Done!" class="loginscreen">
 	</form>
-	
+	<div id="test">
+	</div>
 	</center>
 </body>
-</html>

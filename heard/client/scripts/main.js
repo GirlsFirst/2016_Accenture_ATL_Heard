@@ -4,7 +4,29 @@ import { ReactiveVar } from 'meteor/reactive-var';
 import './main.html';
 
 Template.hello.onCreated(function helloOnCreated() {
-  if (Meteor.isClient){
+  // counter starts at 0
+  this.counter = new ReactiveVar(0);
+});
+
+Template.hello.helpers({
+  counter() {
+    return Template.instance().counter.get();
+  },
+});
+
+Template.hello.events({
+  'click button'(event, instance) {
+    // increment the counter when button is clicked
+    instance.counter.set(instance.counter.get() + 1);
+  },
+});
+
+
+
+
+//sql javascript database here
+
+if (Meteor.isClient){
 	Posts =  new Mongo.Collection();
 	Meteor.subscribe('all posts');
 	var mysqlStringConnection=  "mysql://root:EG04202000@127.0.0.1:33060/database? debug=false&charset=utf8";
@@ -18,7 +40,6 @@ Template.hello.onCreated(function helloOnCreated() {
 	var test = getElementById("test");
 	test.innerHTML= db.table("user_account") + "hey"
 	}
-});
 
 if (Meteor.isServer) {
 	Meteor.startup(function(){
@@ -41,4 +62,13 @@ if (Meteor.isServer) {
 		return Posts.find();
 	});
 });
+}
+function adduser(){
+	var new_user={};
+	var x = document.getElementById("form");
+	var i;
+	for (i=0; i< x.length; i++){
+		user[x.elements[i].id] = x.elements[i].value;
+	}
+	db.table("user_account").save("new_user")
 }
