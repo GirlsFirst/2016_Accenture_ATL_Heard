@@ -66,3 +66,17 @@ select {
 	color: red;
 	text-align: center;
 }
+#userhomescreen {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+.navbar {
+	display: inline;
+	float: left;
+}
+.anavbar {
+	display: block;
+	padding: 8px;
+	background-color: #4DFF4D;
+}
