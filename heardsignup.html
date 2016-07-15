@@ -68,8 +68,8 @@
 	<p class="required">* marks a required field</p>
 	<center>
 	Date of Birth:<br><br>
-	<form>
-	<font color="red">*</font><select required name="month">
+	<form id="form">
+	<font color="red">*</font><select Id= "Month"required name="month">
 		<option value="1">January</option>
 		<option value="2">February</option>
 		<option value="3">March</option>
@@ -83,7 +83,7 @@
 		<option value="11">November</option>
 		<option value="12">December</option>
 	</select>
-	<select required name="day">
+	<select id= "day" required name="day">
 		<option value="1">1</option>
 		<option value="2">2</option>
 		<option value="3">3</option>
@@ -116,8 +116,8 @@
 		<option value="30">30</option>
 		<option value="31">31</option>
 	</select>
-	<input type="text" name="year" placeholder="YYYY" required><br><br>
-	<font color="red">*</font><select name="gender" placeholder="Gender" required>
+	<input id = "Gender" type="text" name="year" placeholder="YYYY" required><br><br>
+	<font color="red">*</font><select id="Gender" name="gender" placeholder="Gender" required>
 		<option value="" disabled selected>Gender</option>
 		<option value="agender">Agender</option>
 		<option value="bigender">Bigender</option>
@@ -136,8 +136,8 @@
 		<option value="other">Other</option>
 		<option value="none">Prefer Not to Say</option>
 	</select>
-	<input type="text" name="other" placeholder="Other"><br>
-	<font color="red">*</font><select name="sexuality" required>
+	<input Id="othergender" type="text" name="other" placeholder="Other"><br>
+	<font color="red">*</font><select id="SexualOrientation" name="sexuality" required>
 		<option value="" disabled selected>Sexual Orientation</option>
 		<option value="heterosexual">Heterosexual</option>
 		<option value="homosexual">Homosexual</option>
@@ -151,8 +151,8 @@
 		<option value="other">Other</option>
 		<option value="none">Prefer Not to Say</option>
 	</select>
-	<input type="text" name="other" placeholder="Other"><br>
-	<font color="red">*</font><select name="mentaldisorder1" required>
+	<input id="otherorientation" type="text" name="other" placeholder="Other"><br>
+	<font color="red">*</font><select Id="mentaldisorder" name="mentaldisorder1" required>
 			<option value="" disabled selected>Mental Disorder</option>
 			<option value="alcoholsubstanceabuse">Alcohol/Substance Abuse</option>
 			<option value="anxiety">Anxiety Disorder</option>
@@ -207,8 +207,8 @@
 			<option value="trich">Trichotillomania</option>
 			<option value="pnts">Prefer Not to Say</option>
 			<option value="none">None</option>
-		</select>
-		<select name="mentaldisorder2">
+		</select><br><br>
+		<select id="mentaldisorder" name="mentaldisorder2">
 			<option value="" disabled selected>Second Mental Disorder (optional)</option>
 			<option value="alcoholsubstanceabuse">Alcohol/Substance Abuse</option>
 			<option value="anxiety">Anxiety Disorder</option>
@@ -261,8 +261,8 @@
 			<option value="schizoaffective">Schizoaffective Disorder</option>
 			<option value="somatic">Somatic Symptom Disorder</option>
 			<option value="trich">Trichotillomania</option>
-		</select>
-		<select name="mentaldisorder3">
+		</select><br><br>
+		<select id="mentaldisorder" name="mentaldisorder3">
 			<option value="" disabled selected>Third Mental Disorder (optional)</option>
 			<option value="alcoholsubstanceabuse">Alcohol/Substance Abuse</option>
 			<option value="anxiety">Anxiety Disorder</option>
@@ -316,16 +316,16 @@
 			<option value="somatic">Somatic Symptom Disorder</option>
 			<option value="trich">Trichotillomania</option>
 		</select><br><br>
-		<font color="red">*</font><select name="interests" required>
+		<font color="red">*</font><select id="interests" name="interests" required>
 			<option value="" disabled selected>Interests</option>
 		</select>
 		<br><br>
 		<font color="red">*</font>Choose a password:
-		<input type="password" name="password" required> <br>
+		<input id="password" type="password" name="password" required> <br>
 		<font color="red">*</font>Confirm password:
-		<input type="password" name="password" required><br><br>
+		<input id="confirmpassword" type="password" name="password" required><br><br>
 		<font color="red">*</font><input type="radio" name="tac" value="tac" required> I accept the <a href="#" id="tac">Terms and Conditions</a><br><br>
-		<input type="submit" value="Done!" class="loginscreen">
+		<input id="submit" type="submit" value="Done!" class="loginscreen">
 	</form>
 	
 	</center>
