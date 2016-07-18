@@ -49,8 +49,8 @@ select {
 	border-radius: 0px 0px 10px 10px;
 	background: #4DFF4D;
 	padding: 20px;
-	width: 45px;
-	height: 15px;
+	width: 80px;
+	height: 35px;
 	float: left;
 	color: white;
 	margin: 0px;
@@ -58,6 +58,8 @@ select {
 	display: inline-block;
 	position: fixed;
 	cursor: pointer;
+	border: 2px solid black;
+	text-align: center;
 }
 #tac {
 	color: black;
@@ -70,13 +72,44 @@ select {
 	list-style-type: none;
 	margin: 0;
 	padding: 0;
+	overflow: hidden;
 }
 .navbar {
-	display: inline;
+	border-right: 1px solid #e5e5e5;
 	float: left;
+}
+.navbar:last-child {
+	border-right: none;
 }
 .anavbar {
 	display: block;
 	padding: 8px;
 	background-color: #4DFF4D;
+	text-align: center;
+	color: black;
+	text-decoration: none;
+}
+#bulletin{
+	border: 5px solid #4DFF4D;
+	width: 600px;
+	height: 750px;
+	background-color: white;
+	overflow-y: scroll;
+	max-width: 700px;
+	max-height: 600px; 
+}
+#title {
+	background: #4DFF4D;
+	height: 40px;
+	width: 600px;
+	text-align: center;
+	vertical-align: middle;
+	color: white;
+	font-size: 20px;
+}
+.examplemessage {
+	border-bottom: 2px dashed #e5e5e5;
+}
+.examplemessage h2{
+	color: #5b5b5b;
 }
