@@ -1,9 +1,9 @@
-<template name="home">
+<template name="findPenpal">
 
 <head>
   <title>Heard</title>
   <link rel="stylesheet" type="text/css" href="main.css">
-  <script src="signup.js">
+  <script src="penpal.js">
   </script>
 </head>
 
@@ -25,7 +25,10 @@
 </ul>
 
 
-<div id="bulletin">
+<div id="penpal">
+{{ #each penpal }}
+{{>pals }}
+{{ /each }}
 </div>
 
 </body>
