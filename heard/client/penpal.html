@@ -3,7 +3,7 @@
 <head>
   <title>Heard</title>
   <link rel="stylesheet" type="text/css" href="main.css">
-  <script src="penpal.js">
+  <script src="home.js">
   </script>
 </head>
 
@@ -25,11 +25,18 @@
 </ul>
 
 
-<div id="penpal">
-{{ #each penpal }}
-{{>pals }}
-{{ /each }}
-</div>
+<!--div id="penpal">
+{{#with currentUser}}
+	{{profile.penpals}}
+{{/with}}
+</div-->
+
+<center>
+	<div id="title" style="vertical-align:middle;">
+		Potential Penpals:
+		{{penpals}}
+	</div>
+</center>
 
 </body>
 </template>

@@ -1,6 +1,7 @@
-messages = new Mongo.Collection('messages');
-
 Template.home.events({
+	'click #findPenpal': function(){
+		FlowRouter.go('/findPenpal');
+	},
     'click #send-button': function(e, t) {
         e.preventDefault();
 		msg = {
@@ -9,35 +10,27 @@ Template.home.events({
 			sent: new Date(),
 			message: $('#message').val()
 		};
-				messages.insert({
-			from: "A.A.Ron",
-			to: Meteor.user()._id,
-			sent: new Date(),
-			message: "Hello!"			
-		});
 		
-		messages.insert({
-			from: "A.A.Ron",
-			to: Meteor.user()._id,
-			sent: new Date(),
-			message: "Hello?"
-		});
-		
-		messages.insert({
-			from: "A.A.Ron",
-			to: Meteor.user()._id,
-			sent: new Date(),
-			message: "hi"
-		});
-		
-		messages.insert(msg);
-		console.log(Meteor.user())
-		console.log(messages.find().fetch())
+		Messages.insert(msg);
+		console.log(Meteor.user());
+		console.log(messages.find().fetch());
 	}
 })
 
-Template.messenger.helpers({
-	'messages': function(){
-		return messages.find({to: Meteor.user()._id});
+Template.home.helpers({
+	'message': function(){
+		return Messages.find().fetch();
+	}
+})
+
+Template.findPenpal.helpers({
+	'penpals': function(){
+		var pals = [Meteor.users.find({gender: Meteor.user().gender}).fetch(),
+			Meteor.users.find({sexuality: Meteor.user().sexulity}).fetch(),
+			Meteor.users.find({mentalDisorder: Meteor.user().mentalDisorder}).fetch(),
+			Meteor.users.find({interests: Meteor.user().interests}).fetch()];
+		console.log(pals);
+		console.log("test");
+		return pals;
 	}
 })

@@ -13,7 +13,7 @@
 <ul id="userhomescreen" align="center">
 	
 	<li id="findpenpal" class="navbar">
-		<a id="findPenpal" href="#" class="anavbar">Find Penpal</a>
+		<a id="findPenpal" href="/findPenpal" class="anavbar">Find Penpal</a>
 	</li>
 	<li id="messages" class="navbar">
 		<a href="#" class="anavbar">Messages</a>
@@ -33,17 +33,19 @@
 <div id="bulletin" align="center">
 	<div class="examplemessage">
 		<br>
-		<h2> Lorem Ipsum </h2>
-		<p>
-		Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eget neque et sem interdum lacinia in eget eros. Suspendisse potenti. Integer aliquet ultrices arcu a elementum. Sed orci augue, lobortis vel dictum at, fringilla at augue. Vestibulum nec lacinia lorem. Aenean efficitur leo dignissim est fringilla fringilla. Nam semper tellus velit, a fringilla turpis porttitor sit amet. Cras a luctus mauris, vitae condimentum arcu. Nam sit amet turpis in risus scelerisque viverra. Etiam at massa metus. Sed eu lorem dolor. Nullam pharetra leo ut lorem posuere fringilla sed ac nibh. Morbi tempus finibus nulla eget accumsan. Maecenas nulla dui, pulvinar quis commodo quis, feugiat non nulla.
-		</p>
-		<br>
+		<!--h2> Lorem Ipsum </h2>
+		
+		{{#with currentUser}}
+			{{profile.penpals}}
+		{{/with}}
+		<br-->
 	</div>
 	<br><br>
 	<div class="examplemessage">
 		<h2> Lorem Ipmeme</h2>
 		<p>
-		Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent convallis nibh convallis, consequat libero id, mattis lectus. Aenean a sapien a sapien rutrum volutpat. Nunc laoreet pellentesque quam, non tristique erat ultrices et. Maecenas eget lorem ligula. Sed ultricies, nibh id sodales tristique, dui magna venenatis odio, ac euismod lectus ante ut metus. Morbi eu rhoncus quam. Sed et quam ante. Quisque in nunc urna. Praesent eget erat eget eros tristique pretium. In tincidunt, erat quis eleifend hendrerit, lacus tortor egestas nisi, sit amet semper nibh ex ut nisi.
+		messages
+		{{message}}
 		</p>
 
 		<div id="bulletin">
@@ -77,6 +79,9 @@
 	</div>
 </div>
 </div>
+<input type="text" name="message" id="message"><br><br>
+<input type="submit" value="send" class="loginscreen" id="send-button">
+
 </center>
 
 </body>

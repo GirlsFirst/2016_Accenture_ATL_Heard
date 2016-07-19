@@ -24,3 +24,12 @@ FlowRouter.route('/register', {
         });
     }
 });
+
+FlowRouter.route('/findPenpal', {
+    name: 'findPenpal',
+    action: function() {
+        BlazeLayout.render("mainLayout", {
+            content: "findPenpal"
+        });
+    }
+});
