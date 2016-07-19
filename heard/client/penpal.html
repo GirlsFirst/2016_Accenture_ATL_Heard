@@ -30,21 +30,26 @@
 	{{profile.penpals}}
 {{/with}}
 </div-->
-
+<br><br><br><br><br>
 <center>
 	<div id="title" style="vertical-align:middle;">
 		Potential Penpals
 	</div>
-	<div id="chat">
-		<div id="matches">
-			{{#each penpals}}
-				{{profile.gender}}
-				{{profile.sexulity}}
-				{{profile.mentalDisorder}}
-				{{profile.interests}}
-			{{/each}}
+	{{#each penpals}}
+		<div id="chat">
+			<div id="matches">
+				<h2>New Potential Penpal!</h2>
+				<br><br>
+				Gender: {{profile.gender}}
+				<br><br>
+				Sexual Orientation: {{profile.sexulity}}
+				<br><br>
+				Mental Disorder(s): {{profile.mentalDisorder}}
+				<br><br>
+				Interests: {{profile.interests}}
+			</div>
 		</div>
-	</div>
+	{{/each}}
 </center>
 
 </body>
