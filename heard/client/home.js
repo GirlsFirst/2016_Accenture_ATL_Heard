@@ -36,12 +36,9 @@ Template.home.helpers({
 
 Template.findPenpal.helpers({
 	'penpals': function(){
-		var pals = [Meteor.users.find({gender: Meteor.user().gender}).fetch(),
-			Meteor.users.find({sexuality: Meteor.user().sexulity}).fetch(),
-			Meteor.users.find({mentalDisorder: Meteor.user().mentalDisorder}).fetch(),
-			Meteor.users.find({interests: Meteor.user().interests}).fetch()];
-		console.log(pals);
-		console.log("test");
-		return pals;
+		return Meteor.users.find({$or: [ {gender: Meteor.user().gender},
+								{sexuality: Meteor.user().sexulity}, 
+								{mentalDisorder: Meteor.user().mentalDisorder},
+								{interests: Meteor.user().interests}]});
 	}
 })

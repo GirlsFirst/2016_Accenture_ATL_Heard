@@ -33,8 +33,17 @@
 
 <center>
 	<div id="title" style="vertical-align:middle;">
-		Potential Penpals:
-		{{penpals}}
+		Potential Penpals
+	</div>
+	<div id="chat">
+		<div id="matches">
+			{{#each penpals}}
+				{{profile.gender}}
+				{{profile.sexulity}}
+				{{profile.mentalDisorder}}
+				{{profile.interests}}
+			{{/each}}
+		</div>
 	</div>
 </center>
 
