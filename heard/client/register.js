@@ -16,7 +16,7 @@ Template.register.events({
 							  $('#mental3').val()]
 			interests = $('#interests').val(),
             password = $('#password').val(),
-            passwordAgain = $('#rePassword').val(),;
+            passwordAgain = $('#rePassword').val();
 			
 
         /* Trim Helper
@@ -53,8 +53,6 @@ Template.register.events({
 				sexualityAtl : sexualityAtl,
 				mentalDisorder : mentalDisorder,
 				interests : interests,
-				penpals: penpals,
-				inbox: inbox,
 				password : password
             }, function(error) {
                 if (error) {

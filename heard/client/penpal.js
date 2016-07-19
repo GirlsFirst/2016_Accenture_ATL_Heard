@@ -1,6 +1,7 @@
-Template.findpenpal.events({
-	'click .connect' : function (){
-		var  penpal =this.id;
-		Meteor.user().update(this.profile.penpal, {$set: {profile.penpal:penpal}});
+Template.findPenpal.events({
+	'click .connect' : function (e){
+		var penpal =$(e.currentTarget).attr("name");
+		console.log(penpal);
+		Meteor.users.update({_id:Meteor.user()._id},{$set:{'profile.penpal':penpal}});
 	} 
 })

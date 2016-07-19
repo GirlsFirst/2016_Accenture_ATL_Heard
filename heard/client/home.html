@@ -22,7 +22,7 @@
 	</li>
 </ul>
 
-<br><br><br><br><br>
+<br><br>
 
 
 <!--bulletin board -->
@@ -37,7 +37,7 @@
 		<h2> Update! </h2>
 			{{ #each bulletin }}
 			<div class="bulletin">
-			{{ bulletin }}
+			{{ m }}
 			</div>
 			{{ /each }}
 		<br><br>
@@ -55,9 +55,9 @@
 <center>
 	<div id="chat">
 		{{ #each message }}
-		<div class="message">
-		    {{ m }}
-		</div>
+		   {{#if isSender from}} <div class="send"> {{m}}</div> 
+		   {{else}}<div class="receive">{{m}}</div>
+		   {{/if}}
 		{{ /each }}
 	</div>
 </center>
@@ -66,7 +66,7 @@
 <input type="text" name="message" id="message">
 <input type="submit" value="send" class="loginscreen" id="send-button">
 </center>
-<br><br><br>
+<br>
 
 </body>
 </template>

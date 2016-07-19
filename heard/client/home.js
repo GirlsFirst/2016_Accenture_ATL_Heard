@@ -6,12 +6,14 @@ Template.home.events({
         e.preventDefault();
 		var msg = {
 			from: Meteor.user()._id,
-			to: Meteor.user().penpal,
+			to: Meteor.user().profile.penpal,
 			sent: new Date(),
-			m: $('#message').val()
+			m: $('#message').val(),
 		};
 		
 		Messages.insert(msg);
+		
+		document.getElementById("message").value = "";
 	}
 })
 
@@ -29,8 +31,12 @@ Template.home.helpers({
 			to: "all"
 		},
 		{$orderby: {Date: 1}}
-	).fetch();
-}
+		);
+	},
+	
+	'isSender': function(from){
+		return from == Meteor.user()._id;
+	}
 })
 
 
