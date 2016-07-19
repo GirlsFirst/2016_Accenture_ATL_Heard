@@ -12,7 +12,7 @@ Accounts.onCreateUser(function(options, user) {
 	user.profile.sexualityAlt = options.sexualityAlt;
 	user.profile.mentalDisorder = options.mentalDisorder;
 	user.profile.interests = options.insterests;
-	user.profile.penpals = options.penpals;
+	user.profile.penpal = options.penpal;
 
     //Basic Role Set Up
     user.roles = ["User"];

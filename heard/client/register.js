@@ -16,14 +16,8 @@ Template.register.events({
 							  $('#mental3').val()]
 			interests = $('#interests').val(),
             password = $('#password').val(),
-            passwordAgain = $('#rePassword').val();
-			penpals = [	
-					Meteor.users.find({gender: Meteor.user().gender}).fetch(),
-					Meteor.users.find({sexuality: Meteor.user().sexulity}).fetch(),
-					Meteor.users.find({mentalDisorder: Meteor.user().mentalDisorder}).fetch(),
-					Meteor.users.find({interests: Meteor.user().interests}).fetch()
-			],
-			inbox = [];
+            passwordAgain = $('#rePassword').val(),;
+			
 
         /* Trim Helper
         var trimInput = function(val) {
