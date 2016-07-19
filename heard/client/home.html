@@ -1,17 +1,16 @@
 <template name="home">
 
 <head>
-  <title>Heard</title>
-  <link rel="stylesheet" type="text/css" href="main.css">
-  <script src="register.js">
-  </script>
+	<title>Heard</title>
+	<link rel="stylesheet" type="text/css" href="main.css">
+	<script src="register.js"> </script>
 </head>
 
 <body>
 	<a href="https://en.wikipedia.org/wiki/Special:Random"><div id="panic" src="https://en.wikipedia.org/wiki/Special:Random">Panic</div></a>
 	<center><div id="banner"><img src="logo.png" id="logo"></div></center>
+
 <ul id="userhomescreen" align="center">
-	
 	<li id="findpenpal" class="navbar">
 		<a id="findPenpal" href="/findPenpal" class="anavbar">Find Penpal</a>
 	</li>
@@ -22,7 +21,11 @@
 		<a href="#" class="anavbar">Edit Profile</a>
 	</li>
 </ul>
+
 <br><br><br><br><br>
+
+
+<!--bulletin board -->
 <center>
 	<div id="title" style="vertical-align:middle;">
 		Bulletin
@@ -30,59 +33,40 @@
 </center>
 
 <center>
-<div id="bulletin" align="center">
-	<div class="examplemessage">
-		<br>
-		<!--h2> Lorem Ipsum </h2>
-		
-		{{#with currentUser}}
-			{{profile.penpals}}
-		{{/with}}
-		<br-->
-	</div>
-	<br><br>
-	<div class="examplemessage">
-		<h2> Lorem Ipmeme</h2>
-		<p>
-		messages
-		{{message}}
-		</p>
-
-		<div id="bulletin">
-			<p>
-			Vestibulum non maximus metus. Maecenas dui leo, ornare nec nisl a, maximus ornare massa. Aliquam pulvinar sodales vulputate. Sed ornare, diam in elementum iaculis, odio sem finibus mauris, quis imperdiet augue ligula ut mi. Morbi vel est vitae felis rhoncus tincidunt. Nulla dui nulla, tristique at tristique ac, sollicitudin ac sem. Sed nec ultricies elit, quis interdum dui. Mauris lorem ligula, posuere venenatis nisi fermentum, consectetur laoreet purus. Quisque ac metus diam. Donec id ornare enim, blandit bibendum velit. Phasellus molestie, sapien at feugiat dapibus, tellus sem varius orci, eget eleifend est justo luctus massa. Duis rutrum est lectus, eget ultrices justo finibus vitae. Phasellus ornare varius tortor, quis vehicula sapien maximus sit amet.
-
-			Mauris eu ligula dignissim, sollicitudin sem semper, interdum sapien. Duis quis eros quis risus mollis pellentesque. Sed congue, neque quis accumsan tempus, enim quam efficitur sem, non hendrerit sapien mi ut nibh. Nam vel risus vestibulum, semper lacus in, auctor neque. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Aliquam nec rhoncus elit. Sed condimentum nulla vel diam bibendum, quis tempus lorem tempor. Pellentesque est quam, consequat sit amet ornare ultricies, vulputate in enim. Curabitur egestas, lacus vitae malesuada volutpat, velit ante blandit justo, a malesuada enim libero maximus nunc. Pellentesque rutrum, dui vel molestie pellentesque, mi eros pretium orci, in mollis augue erat eu diam. Duis consequat malesuada gravida. Cras accumsan sollicitudin odio ut lacinia. Vestibulum egestas, tellus vestibulum accumsan ultricies, tellus massa commodo mi, eget bibendum diam neque tincidunt tortor. Pellentesque egestas eros aliquam, tempor libero at, varius arcu. Fusce ipsum est, porta sed porta ac, ultricies eu arcu.
-			</p>
-			<br>
-		</div>
+	<div id="board" align="center">
+		<h2> Update! </h2>
+			{{ #each bulletin }}
+			<div class="bulletin">
+			{{ bulletin }}
+			</div>
+			{{ /each }}
 		<br><br>
-		<div class="examplemessage">
-			<h2> Lorem Ipsum </h2>
-			<p>
-			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi in erat fermentum, gravida ex at, tincidunt massa. Aenean et condimentum nisl, nec sollicitudin lorem. In in nisi vitae sem tincidunt lacinia. Nunc placerat bibendum magna eget aliquet. Mauris vehicula turpis et justo scelerisque, in tincidunt arcu posuere. Donec placerat orci lacus, vitae lacinia est lacinia non. Aliquam vestibulum vel tellus eget molestie. Ut efficitur elit quis nisi convallis tincidunt vitae id urna. Suspendisse ac tortor eget turpis sollicitudin consectetur non non libero. Quisque feugiat lacinia nunc, id rhoncus ante volutpat a. Morbi vehicula, ligula et feugiat rutrum, neque mauris ultrices.
-			</p>
-			<br>
-		</div>
 	</div>
+</center>
+
+
+<!-- message board -->
 <center>	
 	<div id="title" style="vertical-align:middle;">
 		Messages
 	</div>
 </center>
-<div id="messagewindow">
-	<div class="message">
-	</div>
-	<div class="message">
-	</div>
-	<div class="message">
-	</div>
-</div>
-</div>
-<input type="text" name="message" id="message"><br><br>
-<input type="submit" value="send" class="loginscreen" id="send-button">
 
+<center>
+	<div id="chat">
+		{{ #each message }}
+		<div class="message">
+		    {{ m }}
+		</div>
+		{{ /each }}
+	</div>
 </center>
+
+<center>
+<input type="text" name="message" id="message">
+<input type="submit" value="send" class="loginscreen" id="send-button">
+</center>
+<br><br><br>
 
 </body>
 </template>

@@ -89,14 +89,14 @@ select {
 	color: black;
 	text-decoration: none;
 }
-#bulletin{
+#board{
 	border: 5px solid #4DFF4D;
 	width: 600px;
 	height: 750px;
 	background-color: white;
 	overflow-y: scroll;
 	max-width: 700px;
-	max-height: 600px; 
+	max-height: 100px; 
 }
 #title {
 	background: #4DFF4D;
@@ -107,9 +107,18 @@ select {
 	color: white;
 	font-size: 20px;
 }
-.examplemessage {
+#chat{
+	border: 5px solid #4DFF4D;
+	width: 600px;
+	height: 750px;
+	background-color: white;
+	overflow-y: scroll;
+	max-width: 700px;
+	max-height: 300px; 
+}
+.bulletin {
 	border-bottom: 2px dashed #e5e5e5;
 }
-.examplemessage h2{
+.bulletin h2{
 	color: #5b5b5b;
 }

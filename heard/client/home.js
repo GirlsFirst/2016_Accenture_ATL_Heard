@@ -4,24 +4,35 @@ Template.home.events({
 	},
     'click #send-button': function(e, t) {
         e.preventDefault();
-		msg = {
+		var msg = {
 			from: Meteor.user()._id,
 			to: Meteor.user().penpal,
 			sent: new Date(),
-			message: $('#message').val()
+			m: $('#message').val()
 		};
 		
 		Messages.insert(msg);
-		console.log(Meteor.user());
-		console.log(messages.find().fetch());
 	}
 })
 
 Template.home.helpers({
 	'message': function(){
-		return Messages.find().fetch();
-	}
+
+		return Messages.find(
+			{$or: [{ to: Meteor.user()._id }, {from: Meteor.user()._id}]},
+		{sort: {'sent': -1}}
+		);
+	},
+
+	'bulletin': function(){
+		return Messages.find({
+			to: "all"
+		},
+		{$orderby: {Date: 1}}
+	).fetch();
+}
 })
+
 
 Template.findPenpal.helpers({
 	'penpals': function(){
