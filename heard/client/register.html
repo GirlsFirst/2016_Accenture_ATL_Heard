@@ -18,9 +18,9 @@
 	<center>
 	
 	<form id="form">
-	<input id = "email" type="text" name="email" placeholder="email" required><br><br>
+	*<input id = "email" type="text" name="email" placeholder="email" required><br><br>
 	Date of Birth:<br><br>
-	<font color="red">*</font><select Id= "month" required name="month">
+	*<select Id="month" required name="month">
 		<option value="1">January</option>
 		<option value="2">February</option>
 		<option value="3">March</option>
@@ -68,7 +68,7 @@
 		<option value="31">31</option>
 	</select>
 	<input id = "year" type="text" name="year" placeholder="YYYY" required><br><br>
-	<font color="red">*</font><select id="gender" name="gender" placeholder="Gender" required>
+	*<select id="gender" name="gender" placeholder="Gender" required>
 		<option value="" disabled selected>Gender</option>
 		<option value="agender">Agender</option>
 		<option value="bigender">Bigender</option>
@@ -88,8 +88,7 @@
 		<option value="none">Prefer Not to Say</option>
 	</select>
 	<input Id="otherGender" type="text" name="other" placeholder="Other"><br>
-	<font color="red">*</font>
-	<font color="red">*</font><select name="sexuality" id="sexualOrientation" required>
+	*<select name="sexuality" id="sexualOrientation" required>
 		<option value="" disabled selected>Sexual Orientation</option>
 		<option value="heterosexual">Heterosexual</option>
 		<option value="homosexual">Homosexual</option>
@@ -104,7 +103,7 @@
 		<option value="none">Prefer Not to Say</option>
 	</select>
 	<input id="otherOrientation" type="text" name="other" placeholder="Other"><br>
-	<font color="red">*</font><select id = "mental1" name="mental1" required>
+	*<select id = "mental1" name="mental1" required>
 
 			<option value="" disabled selected>Mental Disorder</option>
 			<option value="alcoholsubstanceabuse">Alcohol/Substance Abuse</option>
@@ -269,15 +268,30 @@
 			<option value="somatic">Somatic Symptom Disorder</option>
 			<option value="trich">Trichotillomania</option>
 		</select><br><br>
-		<!--<font color="red">*</font><select id="interests" name="interests" required>
-			<option value="" disabled selected>Interests</option>
-		</select>-->
+		*<select id="interests" name="interests" required>
+			<option value="" disabled selected>Interest</option>
+			<option value="politics">Politics</option>
+			<option value="memes">Memes</option>
+			<option value="equalrights">Equal Rights Movement</option>
+			<option value="animals">Animals</option>
+			<option value="nature">Nature</option>
+			<option value="reading">Reading/Literature</option>
+			<option value="psychology">Psychology</option>
+			<option value="computerscience">Computer Science</option>
+			<option value="sportsgen">Sports (General)</option>
+			<option value="football">Sports (Football)</option>
+			<option value="soccer">Sports (Soccer)</option>
+			<option value="hockey">Sports (Hockey)</option>
+			<option value="basketball">Sports (Basketball)</option>
+			<option value="baseball">Sports (Baseball)</option>
+			<option value="games">Video Games</option>
+		</select>
 		<br><br>
-		<font color="red">*</font>Choose a password:
-		<input id="password" type="password" name="password" required> <br>
-		<font color="red">*</font>Confirm password:
-		<input id="repassword" type="password" name="password" required><br><br>
-		<font color="red">*</font><input type="radio" name="tac" value="tac" required> I accept the <a href="#" id="tac">Terms and Conditions</a><br><br>
+		Choose a password:
+		*<input id="password" type="password" name="password" required> <br>
+		Confirm password:
+		*<input id="repassword" type="password" name="password" required><br><br>
+		*<input type="radio" name="tac" value="tac" required> I accept the <a href="#" id="tac">Terms and Conditions</a><br><br>
 		<input type="submit" value="Done!" class="loginscreen" id="register-button">
 
 	</form>
