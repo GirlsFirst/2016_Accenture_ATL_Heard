@@ -1,9 +1,17 @@
 FlowRouter.route('/', {
     name: 'home',
     action: function() {
-        BlazeLayout.render("mainLayout", {
-            content: "home"
-        });
+		if (!Meteor.user().profile.penpal) {
+			BlazeLayout.render("mainLayout", {
+				content: "needPenpal"
+			});
+		}
+		else {
+			BlazeLayout.render("mainLayout", {
+				content: "home"
+			});			
+		}
+
     }
 });
 
@@ -28,8 +36,15 @@ FlowRouter.route('/register', {
 FlowRouter.route('/findPenpal', {
     name: 'findPenpal',
     action: function() {
-        BlazeLayout.render("mainLayout", {
-            content: "findPenpal"
-        });
+		if (Meteor.user().profile.penpal){
+			BlazeLayout.render("mainLayout", {
+				content: "alreadyPenpal"
+			});
+		}else {
+			BlazeLayout.render("mainLayout", {
+				content: "findPenpal"
+			});			
+		}
+
     }
 });

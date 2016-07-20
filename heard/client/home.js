@@ -14,6 +14,10 @@ Template.home.events({
 		Messages.insert(msg);
 		
 		document.getElementById("message").value = "";
+	},
+	'click #signout': function() {
+		Meteor.logout();
+		FlowRouter.go('/login');
 	}
 })
 
