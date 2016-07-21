@@ -127,3 +127,15 @@ select {
 .bulletin h2{
 	color: #5b5b5b;
 }
+.send {
+	border: 5px solid #4088ff;
+	border-radius: 5px;
+	background-color: #4088ff;
+	margin: 0px 200px
+}
+.receive {
+	border: 5px solid #cccccc;
+	border-radius: 5px;
+	background-color: #cccccc;
+	margin: 0px 200px
+}

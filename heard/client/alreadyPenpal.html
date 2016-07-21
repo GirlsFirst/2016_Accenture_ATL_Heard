@@ -1,4 +1,4 @@
-<template name="findPenpal">
+<template name="alreadyPenpal">
 
 <head>
   <title>Heard</title>
@@ -38,21 +38,8 @@
 	<div id="title" style="vertical-align:middle;">
 		Potential Penpals
 	</div>
-	{{#each penpals}}
 		<div id="chat">
-			<div id="matches">
-				<h2>New Potential Penpal!</h2>
-				<br><br>
-				Gender: {{profile.gender}}
-				<br><br>
-				Sexual Orientation: {{profile.sexuality}}
-				<br><br>
-				Mental Disorder(s): {{profile.mentalDisorder}}
-				<br><br>
-				Interests: {{profile.interests}}
-				<br><br>
-				<button href="message" type="button" class="connect" name="{{_id}}"> Connect with Penpal</button>
-			</div>
+			<h3> You already have a penpal! Click <a href="/">here</a> to start messaging. </h3>
 		</div>
 	{{/each}}
 </center>

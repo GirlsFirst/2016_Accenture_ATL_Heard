@@ -1,0 +1,72 @@
+<template name="needPenpal"
+
+
+<head>
+	<title>Heard</title>
+	<link rel="stylesheet" type="text/css" href="main.css">
+	<script src="register.js"> </script>
+</head>
+
+<body>
+	<a href="https://en.wikipedia.org/wiki/Special:Random"><div id="panic" src="https://en.wikipedia.org/wiki/Special:Random">Panic</div></a>
+	<center><div id="banner"><img src="/logo.png" id="logo"></div></center>
+
+<center><div><ul id="userhomescreen" align="center" class="centered">
+	<li id="findpenpal" class="navbar">
+		<a id="findPenpal" href="/findPenpal" class="anavbar">Find Penpal</a>
+	</li>
+	<li id="messages" class="navbar">
+		<a href="#" class="anavbar">Messages</a>
+	</li>
+	<li id="editprofile" class="navbar">
+		<a href="#" class="anavbar">Edit Profile</a>
+	</li>
+	<li id="signout" class="navbar">
+		<a href="#" class="anavbar">Logout</a>
+	</li>
+</ul></div></center>
+
+<br><br>
+
+
+<!--bulletin board -->
+<center>
+	<div id="title" style="vertical-align:middle;">
+		Bulletin
+	</div>
+</center>
+
+<center>
+	<div id="board" align="center">
+		<h2> Update! </h2>
+			{{ #each bulletin }}
+			<div class="bulletin">
+			{{ m }}
+			</div>
+			{{ /each }}
+		<br><br>
+	</div>
+</center>
+
+
+<!-- message board -->
+<center>	
+	<div id="title" style="vertical-align:middle;">
+		Messages
+	</div>
+</center>
+
+<center>
+		<div id="chat">
+			<h3> You don't have a penpal yet! <br> Click <a id="findPenpal" href="/findPenpal">here</a> to find one. <h3>
+		</div>
+</center>
+
+<center>
+<input type="text" name="message" id="message">
+<input type="submit" value="send" class="loginscreen" id="send-button">
+</center>
+<br>
+
+</body>
+</template>
