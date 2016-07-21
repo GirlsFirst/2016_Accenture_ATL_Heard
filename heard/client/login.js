@@ -1,6 +1,5 @@
 Template.login.events({
     'click #login-button': function(e, t) {
-		console.log(Meteor.user().penpals);
 		e.preventDefault();
         var email = $('#login-email').val(),
             password = $('#login-password').val();
@@ -15,8 +14,7 @@ Template.login.events({
                     type: "error"
                 });
             } else {
-
-                FlowRouter.go('/');
+				FlowRouter.go('/');
             }
         });
         return false;

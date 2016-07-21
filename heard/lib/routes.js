@@ -1,17 +1,21 @@
 FlowRouter.route('/', {
     name: 'home',
     action: function() {
-		if (!Meteor.user().profile.penpal) {
-			BlazeLayout.render("mainLayout", {
-				content: "needPenpal"
-			});
+		if (Meteor.user()) {
+			if (!Meteor.user().profile.penpal) {
+				BlazeLayout.render("mainLayout", {
+					content: "needPenpal"
+				});
+			}
+			else {
+				BlazeLayout.render("mainLayout", {
+					content: "home"
+				});			
+			}
 		}
 		else {
-			BlazeLayout.render("mainLayout", {
-				content: "home"
-			});			
+			FlowRouter.go('/login');
 		}
-
     }
 });
 
