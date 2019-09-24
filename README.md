@@ -2,8 +2,7 @@
 connecting LGBTQ+ youth and/or youths with mental illness to anonymous penpals
 
 
-Debbie
-elissa
+Debbie, Elissa, Madison
 
 License:
 MIT License
